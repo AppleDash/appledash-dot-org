@@ -1,0 +1,22 @@
+{% extends "layout.html.j2" %}
+{% block title %}Index{% endblock %}
+{% block scripts %}
+    <script src="/static/js/jquery-min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css" />
+{% endblock %}
+
+{% block content %}
+    <!-- <input type="text" style="display: hidden; top: -100; left: -100;" /> -->
+    <div id="console-container">
+        <div id="console">
+            <div class="console-line"></div>
+            <div id="console-input">
+                    <span class="console-prompt"></span>
+                    <pre class="console-command-line"></pre>
+                    <!--<span class="blink">_</span>-->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

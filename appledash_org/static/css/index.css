@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('/static/fonts/DejaVuSansMono.ttf');
+}
+
+body {
+    background-color: black;
+    color: #00CC00;
+    font-family: 'DejaVuSansMono';
+}
+
+#console-container {
+    min-height: 100%;
+}
+
+#console {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 8px;
+}
+
+.console-command-line {
+    display: inline;
+    font-size: 1em;
+    font-family: 'DejaVuSansMono';
+    margin: 0;
+    padding: 0;
+}
+
+.blink {
+    display: inline;
+}
+
