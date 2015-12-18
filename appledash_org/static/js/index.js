@@ -251,7 +251,7 @@ var FS = {
             return true;
         }
 
-        var parent = this.findPath(parts.slice(0, 1).join("/"));
+        var parent = this.findPath(parts.slice(0, -1).join("/"));
 
         parent.files[parts[parts.length - 1]] = FileTab(parent, parts[parts.length - 1], "file");
 
