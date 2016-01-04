@@ -31,7 +31,7 @@ var Commands = {
     },
 
     /*
-        eval <javascript code>
+        eval <javascript code> - Evaluates the given JavaScript code and prints the result, if there is one.
      */
     eval: function(args) {
         var res = eval(args.join(" "));
@@ -46,7 +46,7 @@ var Commands = {
     },
 
     /*
-        ssh <website> - opens <website>
+        ssh <website> - Loads <website> in your browser
      */
     ssh: function(args) {
         if (args.length == 1) {
@@ -101,6 +101,9 @@ var Commands = {
         return tab.list();
     },
 
+    /*
+        cd [path] - Change directory to [path] in the virtual FS, or to the root if none given.
+     */
     cd: function(args) {
         var path = args.length == 0 ? "/" : args[0];
         var tab = FS.findPath(path);
@@ -112,6 +115,9 @@ var Commands = {
         FS.chdir(tab);
     },
 
+    /*
+        touch <file> - Create empty file <file>
+     */
     touch: function(args) {
         if (!FS.touch(args[0])) {
             return "touch: cannot touch '" + args[0] + "': No such file or directory";
